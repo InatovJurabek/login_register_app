@@ -1,0 +1,277 @@
+.form-image {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-image .panel-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Register Page Section */
+.register-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+    color: #333;
+}
+.register-page {
+    flex: 1;
+    padding: 28px 35px;
+    background: white;
+    width: 450px;
+    height: 450px;
+}
+
+/* Browsers (Social buttons) */
+.browsers {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.browsers button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.browsers button a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.google:hover {
+    border-color: #db4437;
+    background: #fff5f5;
+    transform: translateY(-1px);
+}
+
+.github:hover {
+    border-color: #333;
+    background: #f5f5f5;
+    transform: translateY(-1px);
+}
+
+.facebook:hover {
+    border-color: #1877f2;
+    background: #f0f4ff;
+    transform: translateY(-1px);
+}
+
+/* Line style  */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.divider span {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Register Form */
+.register-form h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.btn:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102,126,234,0.1);
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 5px;
+    position: relative;
+}
+
+.confirm-btn::before {
+    /* content: "Create Account"; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(102,126,234,0.3);
+}
+
+/* Social Media Section */
+.social-media {
+    margin-top: 6px;
+    text-align: center;
+}
+
+.social-media p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 12px;
+}
+
+.social-media p a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.social-media p a:hover {
+    text-decoration: underline;
+}
+
+.social-media > a {
+    display: inline-block;
+    margin: 0 6px;
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    transition: all 0.3s;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.social-media > a:hover {
+    color: white;
+    transform: translateY(-1px);
+}
+.social-media > a:nth-child(2):hover { 
+    background: #1877f2; 
+}
+.social-media > a:nth-child(3):hover { 
+    background: #1da1f2; 
+}
+.social-media > a:nth-child(4):hover {  
+    background: #e4405f; 
+}
+.social-media > a:nth-child(5):hover { 
+    background: #0077b5; 
+}
+
+
+/* page o'zgarishi style  */
+/* Sliding panel */
+ .form-image {
+    position: absolute;
+    width: 42%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Form yonlari */
+.register-page,
+.login-page {
+  position: absolute;
+  width: 58%;
+  height: 100%;
+  top: 0;
+    left: 42%;
+}
+
+.register-page {
+    left: 42%;
+    display: block;
+    pointer-events: all;
+}
+
+.login-page {
+    left: 42%;
+    display: none;
+    pointer-events: none;
+}
+
+/* LOGIN MODE */
+.login-mode .register-page {
+    display: none;
+    pointer-events: none;
+}
+
+.login-mode .login-page {
+    display: block;
+    pointer-events: all;
+}
+
+
+
+.error-msg {
+  display: block;
+  min-height: 4px;
+  margin-bottom: 4px;
+  color: #e53935;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-container {
+        flex-direction: column;
+    }
+    
+    .form-image {
+        min-height: 100px;
+    }
+    
+    .register-page {
+        min-width: auto;
+        padding: 20px 25px;
+    }
+    
+    .browsers {
+        flex-direction: column;
+    }
+}

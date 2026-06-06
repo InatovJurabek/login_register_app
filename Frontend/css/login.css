@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.login-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  color: #333;
+}
+
+.form-container {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: relative;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  min-height: 550px;
+  width: 900px;
+}
+.form-image {
+  background-image: url("../image/5752019.webp");
+}
+
+.login-form p {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+/* Login and sign in pages almashtirish  */
+
+.login-page { 
+  display: none;
+  flex: 1;
+  padding: 28px 35px;
+  background: white;
+  width: 450px;
+  height: 450px;
+  margin-top: 100px;
+}
+
+.login-page h5 {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+}
+.form-container {
+  position: relative;
+}
+
+.login-mode .login-page {
+  display: block;
+}
+
+.login-mode .register-page {
+  display: none;
+}
+.login-form a {
+  font-size: 12px;
+}
+
+/* Sign up button style  */
+.sign-up-btn p {
+  color: #666;
+  font-size: 12px;
+}
+.sign-up-btn p a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+}
+.sign-up-btn p a:hover {
+  text-decoration: underline;
+}
+
+/* password box style  */
+.password-box {
+  position: relative;
+}
+
+.password-box input{
+  padding-right: 45px;
+}
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  width: 18px;
+  height: 18px;
+}
+
+

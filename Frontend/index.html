@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="./js/api.js" defer></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/login.js" defer></script>
+    <script src="./js/register.js" defer></script>
+  </head>
+  <body>
+    <section class="container" id="container">
+      <div class="form-container">
+
+        <div class="form-image">
+          <img class="panel-image" src="./image/3d-render-secure-login-password-illustration.jpg" alt="panel image"/>
+        </div>
+        <div class="register-page">
+          <div class="register-heading">
+            <h2>Create an account</h2>
+          </div>
+          <div class="browsers">
+            <button class="google"><a href="/auth/google/">Google</a></button>
+            <button class="github"><a href="/auth/github/">GitHub</a></button>
+            <button class="facebook"><a href="/auth/facebook/">Facebook</a></button>
+          </div>
+          <div class="divider"><span>Or</span></div>
+          <div class="register-form">
+            <h5>Full Name</h5>
+            <input type="text" class="btn" id="text-field" />
+            <span class="error-msg" id="name-error"></span>
+            <h5>Email</h5>
+            <input type="email" class="btn" id="reg-email-field" />
+            <span class="error-msg" id="reg-email-error"></span>
+            <h5>Password</h5>
+            <div class="password-box">
+              <input type="password" class="btn" id="register-password" />
+              <i class="eye-icon" data-lucide="eye"></i>
+            </div>
+            <span class="strength-label" id="strength-label"></span>
+            <span class="error-msg" id="reg-password-error"></span>
+            <h5>Confirm Password</h5>
+            <div class="password-box confirm-password">
+              <input type="password" class="btn" id="confirm-password" />
+              <i class="eye-icon" data-lucide="eye"></i>
+            </div>
+            <span class="error-msg" id="confirm-error"></span>
+            <button class="confirm-btn">Create Account</button>
+            <span class="error-msg" id="register-general-error"></span>
+          </div>
+          <div class="social-media">
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+          </div>
+        </div>
+
+        <div class="login-page">
+          <div class="login-heading">
+            <h2>Login</h2>
+          </div>
+          <div class="login-form">
+            <h5>Email</h5>
+            <input type="email" class="btn" id="login-email-field" />
+            <span class="error-msg" id="login-email-error"></span>
+            <h5>Password</h5>
+            <div class="password-box">
+              <input type="password" class="btn" id="login-password" />
+              <i class="eye-icon" data-lucide="eye"></i>
+            </div>
+            <span class="error-msg" id="login-password-error"></span>
+            <a href="#">Forgot password?</a>
+            <button class="confirm-btn">Login now</button>
+            <span class="error-msg" id="login-general-error"></span>
+            <span class="error-msg" id="login-rate-error"></span>
+          </div>
+          <div class="sign-up-btn">
+            <p>Don't have an account? <a href="#" id="show-register">Sign up</a></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/main.js"></script>
+    <script>lucide.createIcons();</script>
+  </body>
+</html>
