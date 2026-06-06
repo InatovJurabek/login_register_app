@@ -43,9 +43,6 @@ body {
   min-height: 550px;
   width: 900px;
 }
-.form-image {
-  background-image: url("../image/5752019.webp");
-}
 
 .login-form p {
   color: #666;
