@@ -55,3 +55,5 @@ registerSubmitBtn.addEventListener("click", (e) => {
     console.log("Form yuboriladi");
   }
 });
+
+
