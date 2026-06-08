@@ -19,7 +19,7 @@ function validateEmail(email) {
   return "";
 }
 
-registerSubmitBtn.addEventListener("click", (e) => {
+registerSubmitBtn.addEventListener("click", async (e) => {
   e.preventDefault();
 
   nameError.textContent = "";
@@ -51,9 +51,43 @@ registerSubmitBtn.addEventListener("click", (e) => {
     isValid = false;
   }
 
-  if (isValid) {
-    console.log("Form yuboriladi");
+  if (isValid){
+    registerSubmitBtn.disabled = true;
+    registerSubmitBtn.textContent = "Yuklanmoqda...";
+
+    const username = nameField.value.trim()
+        .replace(/\s+/g, "_")
+        .toLowerCase();
+
+    const result = await registerAPI({
+      username: username,
+      email: emailField.value.trim(),
+      password: passwordField.value,
+      password2: confirmField.value,
+    });
+    if (result.ok){
+      saveTokens(
+        result.data.tokens.access,
+        result.data.tokens.refresh
+      );
+      registerSubmitBtn.textContent = "Muvaffaqiyatli!";
+      setTimeout(() =>{
+        window.location.href = "/dashboar.html";
+      }, 1000);
+    } else if (result.status === 0){
+      //Internet yo'q
+      nameError.textContent = "Internet aloqasi yo'q. Qayta urunib ko'ring.";
+      registerSubmitBtn.disabled = false;
+      registerSubmitBtn.textContent = "Create Account";
+    } else {
+      const errors = result.data;
+      if (errors?.email) emailError.textContent = errors.email[0];
+      if (errors?.username) nameError.textContent = errors.username[0];
+      if (errors?.password) passwordError.textContent = errors.password[0];
+
+      registerSubmitBtn.disabled = false;
+      registerSubmitBtntextContent = "Create account";
+    }
   }
 });
-
 
